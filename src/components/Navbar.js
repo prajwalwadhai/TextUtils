@@ -7,7 +7,7 @@ import React from 'react'
 export default function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container-fluid">
+        <div className="container-fluid ">
           <a className="navbar-brand" href= "/">
             {props.title}
           </a>
@@ -45,9 +45,9 @@ export default function Navbar(props) {
                 >
                   Dropdown
                 </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href= "/">
+                    <a className="dropdown-item " href= "/">
                       Action
                     </a>
                   </li>
