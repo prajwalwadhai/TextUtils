@@ -9,22 +9,26 @@ export default function TextForm(props) {
         // setText("You have clicked on handleUpClick" + text);
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Converted to UpperCase!" , "success");
     }
 
     const handleLowClick=()=>{
       let newText = text.toLocaleLowerCase();
       setText(newText);
+      props.showAlert("Converted to LowerCase!" , "success");
     }
 
     const handleClearClick=()=>{
       let newText = '';
       setText(newText);
+      props.showAlert("Text Cleared!" , "success");
     }
 
     const handleCopy=()=>{
         var text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Text Copied!" , "success");
     }
 
     const handleOnChange= (event)=>{
