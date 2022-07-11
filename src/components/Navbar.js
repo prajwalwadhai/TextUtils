@@ -1,6 +1,7 @@
-// rfc : is the shortcut for below React Fuction based Component
+// rfc : is the shortcut htmlFor below React Fuction based Component
 // impt : import PropTypes form 'prop-typs'
 
+import {Link} from 'react-router-dom'  // Hamne Link import kiya kiv ki ye react router ka part hai ab jaha jaha <a><a/> ka tag hai vaha a=Link and href=to se replace karna hai taki us page par ham ja sake
 import PropTypes from 'prop-types'
 
 import React from 'react'
@@ -25,16 +26,16 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href= "/">
+                <Link className="nav-link active" aria-current="page" to= "/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href= "/">
+                <Link className="nav-link" to= "/about">
                   {props.aboutText}
-                </a>
+                </Link>
               </li>
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
                   href= "/"
@@ -68,10 +69,10 @@ export default function Navbar(props) {
               </li>
               <li className="nav-item">
                 <a className="nav-link disabled">Disabled</a>
-              </li>
+              </li> */}
             </ul>
-            <form className="d-flex" role="search">
-              {/* <input
+            {/* <form className="d-flex" role="search">
+              <input
                 className="form-control me-2"
                 type="search"
                 placeholder="Search"
@@ -79,20 +80,32 @@ export default function Navbar(props) {
               />
               <button className="btn btn-outline-success" type="submit">
                 Search
-              </button> */}
-            </form>
+              </button>
+            </form> */}
           </div>
-        <div className={`form-check form-switch text-${props.mode ==='light'?'dark':'light'}`}>
-            <input className="form-check-input" onClick= {props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault" >Enable {props.mode} Mode</label>
-        </div>
+          {/* <div className={`form-check form-switch mx-1 text-${props.mode ==='light'?'dark':'light'}`}>
+              <input className="form-check-input" onClick= {props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+              <label className="form-check-label" htmlFor="flexSwitchCheckDefault" >Enable {props.mode==='light'?'dark':'light'} Mode</label>
+          </div> */}
+            
+            {/* TODO: make and fix this multicolor Theme*/}
+          <div className={`form-check form-switch mx-1 text-${props.mode ==='light'?'dark':'light'}`}>
+              <input className="form-check-input" onClick= {props.toggleMode} type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+              <label className="form-check-label" htmlFor="inlineRadio1">Enable {props.mode==='light'?'dark':'light'} Mode</label>
+          </div>
+          <div className={`form-check form-switch mx-1 text-${props.mode ==='light'?'dark':'light'}`}>
+              <input className="form-check-input" onClick= {props.toggleGreyMode} type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
+              <label className="form-check-label" htmlFor="inlineRadio2">Grey</label>
+          </div>
+          <div className={`form-check form-switch mx-1 text-${props.mode ==='light'?'dark':'light'}`}>
+              <input className="form-check-input" onClick= {props.toggleGreyMode}  type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"/>
+              <label className="form-check-label" htmlFor="inlineRadio3">Neavy</label>
+          </div>
+
         </div>
       </nav>
   )
 }
-
-
 Navbar.propTypes = {
     title : PropTypes.string.isRequired
 }
-
