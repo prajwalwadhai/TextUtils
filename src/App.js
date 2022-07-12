@@ -1,17 +1,17 @@
 // import { keyboard } from "@testing-library/user-event/dist/keyboard";
 import { useState } from "react";
 import "./App.css";
-import About from "./About";
+// import About from "./About";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  // Link,
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+//   // Link,
+// } from "react-router-dom";
 
 
 function App() {
@@ -86,14 +86,14 @@ function App() {
     // </div>
 
     <>
-    {/* <Navbar title="TextUtils" aboutText="About" mode ={mode} toggleMode={toggleMode}/>
+    <Navbar title="TextUtils" aboutText="About" mode ={mode} toggleMode={toggleMode}/>
     <Alert alert = {alert} showAlert ={showAlert}/>
       <div className="container my-4">
               <TextForm heading = "Enter Text Here" mode ={mode} greyMode={greyMode} toggleMode={toggleMode} toggleGreyMode={toggleGreyMode} showAlert={showAlert}/>
-              <About />
-      </div> */}
+              {/* <About /> */}
+      </div>
 
-    <BrowserRouter>
+    {/* <BrowserRouter>
     <Navbar title="TextUtils" aboutText="About" mode ={mode} toggleMode={toggleMode}/>
     <Alert alert = {alert} showAlert ={showAlert}/>
       <div className="container my-4">
@@ -102,7 +102,7 @@ function App() {
         <Route path="about/*" element={<About />} />
       </Routes>
       </div>
-    </BrowserRouter>
+    </BrowserRouter> */}
     </>
   );
 }
