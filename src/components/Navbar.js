@@ -83,13 +83,14 @@ export default function Navbar(props) {
               </button>
             </form> */}
           </div>
-          {/* <div className={`form-check form-switch mx-1 text-${props.mode ==='light'?'dark':'light'}`}>
+          <div className={`form-check form-switch mx-1 text-${props.mode ==='light'?'dark':'light'}`}>
               <input className="form-check-input" onClick= {props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
               <label className="form-check-label" htmlFor="flexSwitchCheckDefault" >Enable {props.mode==='light'?'dark':'light'} Mode</label>
-          </div> */}
+          </div>
             
             {/* TODO: make and fix this multicolor Theme*/}
-          <div className={`form-check form-switch mx-1 text-${props.mode ==='light'?'dark':'light'}`}>
+
+          {/* <div className={`form-check form-switch mx-1 text-${props.mode ==='light'?'dark':'light'}`}>
               <input className="form-check-input" onClick= {props.toggleMode} type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
               <label className="form-check-label" htmlFor="inlineRadio1">Enable {props.mode==='light'?'dark':'light'} Mode</label>
           </div>
@@ -100,7 +101,7 @@ export default function Navbar(props) {
           <div className={`form-check form-switch mx-1 text-${props.mode ==='light'?'dark':'light'}`}>
               <input className="form-check-input" onClick= {props.toggleGreyMode}  type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"/>
               <label className="form-check-label" htmlFor="inlineRadio3">Neavy</label>
-          </div>
+          </div> */}
 
         </div>
       </nav>
