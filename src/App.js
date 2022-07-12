@@ -13,7 +13,6 @@ import React from "react";
 //   // Link,
 // } from "react-router-dom";
 
-
 function App() {
   
   // const inlineRadio2 = document.getElementById('inlineRadio2');
