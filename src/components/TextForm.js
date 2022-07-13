@@ -1,4 +1,4 @@
-// Hooks : bina class ko use kiye class ke feature ko ham use kar sakte hai using Hooks(variable ko update ham normal method se nani kar sakte to state ka use karte hai)
+// Hooks : bina className ko use kiye className ke feature ko ham use kar sakte hai using Hooks(variable ko update ham normal method se nani kar sakte to state ka use karte hai)
 // search on google "react hooks" documentation me hooks ka ye syntax mil jayega (useState is a Hooks)
 
 import React, {useState} from "react";
@@ -51,10 +51,10 @@ export default function TextForm(props) {
           style={{backgroundColor: props.mode==='dark'?'#121212':'white'}}
           ></textarea>
       </div>
-      <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to Upper-Case</button> {/* must use onClick event listnear for when we click on button it run's the fuction handleUpclick */}
-      <button className="btn btn-primary mx-1" onClick={handleLowClick}>Convert to Lower-Case</button> 
-      <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear Text</button>
-      <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text</button>
+      <button className="btn btn-primary mx-1 my-2" onClick={handleUpClick}>Convert to Upper-Case</button> {/* must use onClick event listnear for when we click on button it run's the fuction handleUpclick */}
+      <button className="btn btn-primary mx-1 my-2" onClick={handleLowClick}>Convert to Lower-Case</button> 
+      <button className="btn btn-primary mx-1 my-2" onClick={handleClearClick}>Clear Text</button>
+      <button className="btn btn-primary mx-1 my-2" onClick={handleCopy}>Copy Text</button>
     </div>
 
     <div className={`container my-4 text-${props.mode==='light'?'dark':'light'}`}>
@@ -64,6 +64,7 @@ export default function TextForm(props) {
       <h2>Preview</h2>
       <p>{text.length>0 ? text : "Enter the text in the above text area to preview it here"}</p>
     </div>
+
     </>
   );
 }
