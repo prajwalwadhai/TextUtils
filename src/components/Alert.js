@@ -8,9 +8,11 @@ export default function Alert(props) {
   }
   
   return (
-    props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">   {/*props.alert && isliye likha taki props.alert ye to null hai initially to usko iss condition se resolve karnge (this is happen because all JSX will be converted into Javscript calls)*/}
+    <div style={{height:'40px'}}>
+    {props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">   {/*props.alert && isliye likha taki props.alert ye to null hai initially to usko iss condition se resolve karnge (this is happen because all JSX will be converted into Javscript calls)*/}
         <strong>{capitalize(props.alert.type)}</strong>: {props.alert.msg}
         {/* <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> */}
+    </div>}
     </div>
   )
 }

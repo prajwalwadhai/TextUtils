@@ -1,10 +1,11 @@
 // import { keyboard } from "@testing-library/user-event/dist/keyboard";
 import { useState } from "react";
 import "./App.css";
-// import About from "./About";
+import About from "./components/About";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
+import Footer from "./components/Footer";
 import React from "react";
 // import {
 //   BrowserRouter,
@@ -88,8 +89,9 @@ function App() {
     <Navbar title="TextUtils" aboutText="About" mode ={mode} toggleMode={toggleMode}/>
     <Alert alert = {alert} showAlert ={showAlert}/>
       <div className="container my-4">
-              <TextForm heading = "Enter Text Here" mode ={mode} greyMode={greyMode} toggleMode={toggleMode} toggleGreyMode={toggleGreyMode} showAlert={showAlert}/>
-              {/* <About /> */}
+              <TextForm heading = "Enter Text Here" mode ={mode}  toggleMode={toggleMode} showAlert={showAlert}/>
+              <About mode ={mode}/>
+      <Footer mode ={mode} toggleMode={toggleMode}/>
       </div>
 
     {/* <BrowserRouter>

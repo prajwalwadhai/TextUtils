@@ -1,33 +1,43 @@
 import React, { useState } from "react";
 
-export default function About() {
-  const [mystyle, setMyStyle] = useState({
-    color: "black",
-    backgroundColor: "white",
-  });
+export default function About(props) {
+  
+  let mystyle ={
+    color : props.mode === 'dark'?'white':'black',
+    backgroundColor : props.mode === 'dark'?'#444444':'white',
+    border:'1px solid red',
+    borderColor:'white'
+  }
+  
+  
+  // ****** This is for dark mode button inside the about section which is not use when dark mode is present in navbar section ******
+  // const [mystyle, setMyStyle] = useState({
+  //   color: "black",
+  //   backgroundColor: "white",
+  // });
 
-  const [btnText , setBtnText] = useState("Enable Dark Mode");
 
-  const toggleStyle = () => {
-    if (mystyle.color === "black") {
-      setMyStyle({
-        color: "white",
-        backgroundColor: "black",
-        // border : '1px solid red'
-      });
-      setBtnText("Enable Light Mode");
-    }
-    else {
-      setMyStyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setBtnText("Enable Dark Mode");
-    }
-  };
+  // const [btnText , setBtnText] = useState("Enable Dark Mode");
+  // const toggleStyle = () => {
+  //   if (mystyle.color === "black") {
+  //     setMyStyle({
+  //       color: "white",
+  //       backgroundColor: "black",
+  //       // border : '1px solid red'
+  //     });
+  //     setBtnText("Enable Light Mode");
+  //   }
+  //   else {
+  //     setMyStyle({
+  //       color: "black",
+  //       backgroundColor: "white",
+  //     });
+  //     setBtnText("Enable Dark Mode");
+  //   }
+  // };
 
   return (
-    <div className="container my-5" style={mystyle}>
+    <div className="container my-5" style={{color : props.mode === 'dark'?'white':'black'}}>
     {/* make sho */}
       <h1 className="my-2">About Us</h1>
       <div
@@ -43,6 +53,7 @@ export default function About() {
               data-bs-target="#flush-collapseOne"
               aria-expanded="false"
               aria-controls="flush-collapseOne"
+              style={mystyle}
             >
               Accordion Item #1
             </button>
@@ -70,6 +81,7 @@ export default function About() {
               data-bs-target="#flush-collapseTwo"
               aria-expanded="false"
               aria-controls="flush-collapseTwo"
+              style={mystyle}
             >
               Accordion Item #2
             </button>
@@ -98,6 +110,7 @@ export default function About() {
               data-bs-target="#flush-collapseThree"
               aria-expanded="false"
               aria-controls="flush-collapseThree"
+              style={mystyle}
             >
               Accordion Item #3
             </button>
@@ -120,11 +133,12 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="container my-3">
+      {/* <div className="container my-3">
         <button type="button" className="btn btn-primary" onClick={toggleStyle}>
           {btnText}
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
+  
