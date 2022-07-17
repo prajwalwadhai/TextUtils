@@ -70,7 +70,7 @@ export default function About(props) {
             Reverse a text to read from end to start
             Title Case sentence
             Format number for thousand separator and to include decimal points. This will also use proper country-based formatting!
-            Compare 2 strings to find if they are equal – can also ignore case
+            Compare 2 strings to find if they are equal  can also ignore case
             Perform search using Regular Expression Search on Steroid :o
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function About(props) {
             style={mystyle}
           >
             <div className="accordion-body">
-            Accessibility is all about making websites more usable for everyone, and especially for people with disabilities (like visual or audible impairments, sicknesses, or situational disabilities). It’s a broad term with even broader guidelines, but one of the ways you can make your site more accessible is by optimizing the alt text on your images.
+            Accessibility is all about making websites more usable for everyone, and especially for people with disabilities like visual or audible impairments, sicknesses, or situational disabilities. Its a broad term with even broader guidelines, but one of the ways you can make your site more accessible is by optimizing the alt text on your images.
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function About(props) {
             style={mystyle}
           >
             <div className="accordion-body">
-             Hossein Amerkashi posted: “TextUtils extension will allow you to quickly > perform such functions as: Reverse a text to read from end to start Title  Case sentence Format number for thousand separator and to include decimal > points Compare 2 strings to find if they are equal – can” 
+             Hossein Amerkashi posted: “TextUtils extension will allow you to quickly  perform such functions as: Reverse a text to read from end to start Title  Case sentence Format number for thousand separator and to include decimal  points Compare 2 strings to find if they are equal can” 
             </div>
           </div>
         </div>
