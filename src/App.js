@@ -53,19 +53,19 @@ function App() {
     }
   }
 
-  const toggleGreyMode=()=>{
-    document.body.style.backgroundColor = 'red';
-    if(greyMode === 'light'){
-      setGreyMode('dark');
-      showAlert("Dark mode has been Enabled", "success"); 
-    }
-    else{
-      setGreyMode('light');
-      document.body.style.backgroundColor ='white';
-      showAlert("Light mode has been Enabled", "success");
-      document.title ='TextTutils - Light Mode';
-    }
-  }
+  // const toggleGreyMode=()=>{
+  //   document.body.style.backgroundColor = 'red';
+  //   if(greyMode === 'light'){
+  //     setGreyMode('dark');
+  //     showAlert("Dark mode has been Enabled", "success"); 
+  //   }
+  //   else{
+  //     setGreyMode('light');
+  //     document.body.style.backgroundColor ='white';
+  //     showAlert("Light mode has been Enabled", "success");
+  //     document.title ='TextTutils - Light Mode';
+  //   }
+  // }
 
   return (
     // <div classNameName="App">
@@ -91,17 +91,18 @@ function App() {
       <div className="container my-4">
               <TextForm heading = "Enter Text Here" mode ={mode}  toggleMode={toggleMode} showAlert={showAlert}/>
               <About mode ={mode}/>
-      <Footer mode ={mode} toggleMode={toggleMode}/>
+              <Footer mode ={mode} toggleMode={toggleMode}/>
       </div>
 
     {/* <BrowserRouter>
-    <Navbar title="TextUtils" aboutText="About" mode ={mode} toggleMode={toggleMode}/>
-    <Alert alert = {alert} showAlert ={showAlert}/>
+      <Navbar title="TextUtils" aboutText="About" mode ={mode} toggleMode={toggleMode}/>
+      <Alert alert = {alert} showAlert ={showAlert}/>
       <div className="container my-4">
-      <Routes>
-        <Route path="/" element={<TextForm heading = "Enter Text Here" mode ={mode} greyMode={greyMode} toggleMode={toggleMode} toggleGreyMode={toggleGreyMode} showAlert={showAlert}/>} />
-        <Route path="about/*" element={<About />} />
-      </Routes>
+              <Routes>
+                  <Route path="/" element={<TextForm heading = "Enter Text Here" mode ={mode} greyMode={greyMode} toggleMode={toggleMode} toggleGreyMode={toggleGreyMode} showAlert={showAlert}/>} />
+                  <Route path="about/*" element={<About />} />
+              </Routes>
+      <Footer mode ={mode} toggleMode={toggleMode}/>
       </div>
     </BrowserRouter> */}
     </>

@@ -4,9 +4,9 @@ export default function About(props) {
   
   let mystyle ={
     color : props.mode === 'dark'?'white':'black',
-    backgroundColor : props.mode === 'dark'?'#444444':'white',
-    border:'1px solid red',
-    borderColor:'white'
+    backgroundColor : props.mode === 'dark'?'#121212':'white',
+    // border:'1px solid',
+    // borderColor:'white'
   }
   
   
@@ -55,7 +55,7 @@ export default function About(props) {
               aria-controls="flush-collapseOne"
               style={mystyle}
             >
-              Accordion Item #1
+              TextUtils extension
             </button>
           </h2>
           <div
@@ -66,9 +66,12 @@ export default function About(props) {
             style={mystyle}
           >
             <div className="accordion-body">
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> className. This is
-              the first item's accordion body.
+            TextUtils extension will allow you to quickly perform such functions as:
+            Reverse a text to read from end to start
+            Title Case sentence
+            Format number for thousand separator and to include decimal points. This will also use proper country-based formatting!
+            Compare 2 strings to find if they are equal – can also ignore case
+            Perform search using Regular Expression Search on Steroid :o
             </div>
           </div>
         </div>
@@ -83,7 +86,7 @@ export default function About(props) {
               aria-controls="flush-collapseTwo"
               style={mystyle}
             >
-              Accordion Item #2
+              TextUtils Fuctions
             </button>
           </h2>
           <div
@@ -94,10 +97,7 @@ export default function About(props) {
             style={mystyle}
           >
             <div className="accordion-body">
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> className. This is
-              the second item's accordion body. Let's imagine this being filled
-              with some actual content.
+            Accessibility is all about making websites more usable for everyone, and especially for people with disabilities (like visual or audible impairments, sicknesses, or situational disabilities). It’s a broad term with even broader guidelines, but one of the ways you can make your site more accessible is by optimizing the alt text on your images.
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function About(props) {
               aria-controls="flush-collapseThree"
               style={mystyle}
             >
-              Accordion Item #3
+              TextUtils Blogs
             </button>
           </h2>
           <div
@@ -123,12 +123,7 @@ export default function About(props) {
             style={mystyle}
           >
             <div className="accordion-body">
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> className. This is
-              the third item's accordion body. Nothing more exciting happening
-              here in terms of content, but just filling up the space to make it
-              look, at least at first glance, a bit more representative of how
-              this would look in a real-world application.
+             Hossein Amerkashi posted: “TextUtils extension will allow you to quickly > perform such functions as: Reverse a text to read from end to start Title  Case sentence Format number for thousand separator and to include decimal > points Compare 2 strings to find if they are equal – can” 
             </div>
           </div>
         </div>
